@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
       - name: node-app
-        image: node-k8s-app:v1
-        imagePullPolicy: Never
+        image: ranjith1204/node-k8s-app:latest
         ports:
         - containerPort: 3000
