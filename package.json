@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Simple Node app for Kubernetes",
   "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo Test successful"
+  },
   "dependencies": {
     "express": "^4.18.2"
   }
