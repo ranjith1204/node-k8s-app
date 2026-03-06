@@ -41,3 +41,9 @@ jobs:
       - name: Push Docker Image
         run: |
           docker push ${{ secrets.DOCKER_USERNAME }}/node-k8s-app:latest
+                - name: Update Kubernetes Deployment
+        run: |
+          kubectl set image deployment/node-app-deployment \
+          node-app-container=${{ secrets.DOCKER_USERNAME }}/node-k8s-app:latest
+
+          kubectl rollout status deployment/node-app-deployment
